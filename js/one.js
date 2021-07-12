@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       y: -50,
   });
 
-  gsap.to("aside", {
+   gsap.to("aside", {
     x: -30,
     duration: 0.5,
     ease: "back.out(1.2)",
@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // animate here when close the menu
     console.log(event);
 
-    gsap.to("close", {
-      x:0,
-      y:-50,
+    gsap.to(".close", {
+      x: 0,
+      y: -100,
       duration: 0.5,
       ease: "power2",
   });
-     gsap.to(".aside li", {
+     gsap.to("aside li", {
       duration: 0.5,
       opacity: 0,
       stagger: 0.4,
