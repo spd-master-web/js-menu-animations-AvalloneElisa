@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.to("aside", {
     x: -30,
-    duration: 0.7,
+    duration: 0.5,
     ease: "back.out(1.2)",
   });
 
@@ -26,15 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.to("aside .copy", {
     x: 2,
-    duration: 1.5,
+    duration: 1,
     ease: "bounce.out",
     opacity: 1,
   });
-
++
   gsap.to(".close", {
     x: 1,
     y: 0,
-    duration: 0.7,
+    duration: 0.5,
     ease: "power2",
   });
 })
@@ -43,6 +43,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // animate here when close the menu
     console.log(event);
 
-    gsap.to("close")
-  })
+    gsap.to("close", {
+      x:0,
+      y:-50,
+      duratio: 0.5,
+  });
+     gsap.to(".aside li", {
+      duration: 0.5,
+      opacity: 0,
+      stagger: 0.4,
+       
+  });
+  gsap.to("aside .copy",{
+    x: -200,
+    y: 0,
+    opacity: 0,
+    duration: 0.4,
+  });
+
+  gsap.to(".hamburger",{
+    x: 0,
+    y: 1,
+  });
+
+  gsap.to("aside",{
+    delay: 2,
+    x: -400,
+    duration: 0.7,
+    ease: "power4",
+    });
+
+})
 })
