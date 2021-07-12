@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to(".hamburger",{
       x: 0,
       y: -50,
-  })
+  });
 
   gsap.to("aside", {
     x: -30,
@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.to("close", {
       x:0,
       y:-50,
-      duratio: 0.5,
+      duration: 0.5,
+      ease: "power2",
   });
      gsap.to(".aside li", {
       duration: 0.5,
